@@ -48,6 +48,7 @@
   
   .signup-form {
     margin-top: 50px;
+    
   }
   
   .selectore {
@@ -76,5 +77,11 @@
     height: 40px;
     width: 300px;
   }
+ .inputtext
+ {
+  width: 250px;
+  border: 2px solid blue;
+  border-radius: 50px 50px;
   
+ }
   
