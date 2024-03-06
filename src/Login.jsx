@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap'
-
-import Signup from './Signup'
 import  './Login.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
 function Login() {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  // const { login } = useAuth();
+
+  const handleLogin = () => {
+    if (username === 'admin' && password === '123') {
+      
+      navigate(`/admindash`);
+    }
+    else if (username === 'user' && password === '111') {
+      
+        navigate(`/user`);
+      }
+     else {
+      alert('Invalid password or username');
+    }
+  };
   return (
 
     <div className='login-header'>
@@ -23,12 +41,13 @@ function Login() {
       type="password"
       id="inputPassword5"
       aria-describedby="passwordHelpBlock"
+      onChange={(e)=>setUsername(e.target.value)}
     />
      <Form.Label className='login-userlabel' htmlFor="inputPassword5">PASSWORD</Form.Label>
     <Form.Control className='login-input'
       type="password"
       id="inputPassword5"
-      aria-describedby="passwordHelpBlock"
+      aria-describedby="passwordHelpBlock"  onChange={(e)=>setPassword(e.target.value)}
     />
      <Form.Label className='login-branchlabel' htmlFor="inputPassword5">BRANCH</Form.Label>
      <Form.Select className='login-option' aria-label="Default select example">
@@ -37,7 +56,7 @@ function Login() {
    <option value="2">branch 2</option>
    <option value="3">branch 3</option>
  </Form.Select>
- <button className='login-button' type="submit">
+ <button className='login-button'onClick={handleLogin} type="submit">
           Login
         </button>
        

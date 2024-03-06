@@ -1,6 +1,6 @@
 .signup-header {
     
-    position: fixed;
+    
     height: 100vh; /* Use viewport height for full screen */
     padding-top: 100px;
     background-image: url("https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images-1536x1024.jpg");
@@ -13,24 +13,24 @@
     background-color: rgb(156, 148, 199);
     border-radius: 1rem;
     margin: auto;
-    height: 500px;
-    width: 600px;
+    height: 400px;
+    width: 550px;
   }
   
 .label-signupuser
 {
     color: blue;
-    margin-right: 200px;
+    margin-right: 160px;
 }
 .label-signuppas
 {
     color: blue;
-    margin-right: 210px;
+    margin-right: 165px;
 }
 .label-signupconf
 {
     color: blue;
-    margin-right: 150px;
+    margin-right: 105px;
 }
 .drops
 {
@@ -69,7 +69,7 @@
   }
   
   .signup-butt {
-    margin-top: 70px;
+    margin-top: 40px;
     background-color: rgb(34, 7, 63);
     border: 1px solid rgb(34, 7, 63);
     border-radius: 50px 50px;
@@ -84,4 +84,15 @@
   border-radius: 50px 50px;
   
  }
-  
+ 
+ @media screen and (max-width: 500px) {
+
+.signup-header
+{
+  display: inline-block;
+  background-size: cover;
+  padding-top :200px;
+  height: 100vh;
+
+}
+ }
