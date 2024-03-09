@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
-import { Col, Container, Form, Row } from 'react-bootstrap'
+import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap'
 import  './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
-
+import { colors } from '@mui/material';
 function Login() {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   // const { login } = useAuth();
 
   const handleLogin = () => {
@@ -38,8 +42,8 @@ function Login() {
   <h1>LOGIN</h1><br />
       <Form.Label className='login-userlabel' htmlFor="inputPassword5">USERNAME</Form.Label>
     <Form.Control className='login-input'
-      type="password"
-      id="inputPassword5"
+      type="text"
+    
       aria-describedby="passwordHelpBlock"
       onChange={(e)=>setUsername(e.target.value)}
     />
@@ -56,10 +60,8 @@ function Login() {
    <option value="2">branch 2</option>
    <option value="3">branch 3</option>
  </Form.Select>
- <button className='login-button'onClick={handleLogin} type="submit">
-          Login
-        </button>
-       
+ 
+        <Button variant="secondary" className='login-button'onClick={handleLogin}>Login</Button>
     
 <hr />
 <div >
@@ -69,13 +71,70 @@ function Login() {
 
 
 </div><br />
-<h6 className='fonts'>Don't have an account yet?<Link className='sty'  to={`/signup`}>Sing up here</Link></h6>
+<h6 className='fonts'>Don't have an account yet?<Link  onClick={handleShow} className='sty'  to={`/`}>Sing up here</Link></h6>
 </div>
 <br />
 </div>
       </Col>
     </Row>
   </Container>
+  <Container >
+ 
+  <Modal show={show} onHide={handleClose}>
+        <Modal.Header className='modals' closeButton>
+          <Modal.Title>SIGN UP</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='modals'>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label className='label' >USER NAME</Form.Label>
+              <Form.Control className='control'
+                type="text"
+                placeholder="USERNAME"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+               <Form.Label className='label'>PASSWORD</Form.Label>
+              <Form.Control  className='control'
+                type="text"
+                placeholder="PASSWORD"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+               <Form.Label className='label'>CONFORM PASSWORD</Form.Label>
+              <Form.Control  className='control'
+                type="text"
+                placeholder="CONFORM PASSWORD"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group>  <Form.Label className='label'>BRANCH</Form.Label>
+                <Form.Select  className='control' aria-label="Default select example">
+      <option value="1">BRANCH ONE</option>
+      <option value="2">BRANCH TWO</option>
+      <option value="3">BRANCH THREE</option>
+    </Form.Select>
+    </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer className='modals'>
+          <Button className='sign-but' variant="secondary " onClick={handleClose}>
+            Save 
+          </Button>
+          <Button className='sign-but' variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </Container>
   </div>
 
     

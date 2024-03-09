@@ -1,12 +1,12 @@
 import React from 'react'
-import { useAuth } from './AuthContext';
+
 
 function Userdash() {
 
   return (
     <div>
       <h1>
-           hello
+           hello user
       </h1>
       
     </div>

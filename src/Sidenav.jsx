@@ -2,7 +2,6 @@ import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
-
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
@@ -17,9 +16,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { useNavigate } from 'react-router-dom';
+import Nave from './Nave';
+import './Nave.css'
+
+
 
 const drawerWidth = 240;
-
 const openedMixin = (theme) => ({
   width: drawerWidth,
   transition: theme.transitions.create('width', {
@@ -75,6 +77,8 @@ export default function Sidenav() {
  const navigate=useNavigate();
 
   return (
+    <>
+    <Nave/>
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
 
@@ -180,5 +184,6 @@ export default function Sidenav() {
 
 
     </Box>
+    </>
   );
 }
