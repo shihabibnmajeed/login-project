@@ -7,8 +7,9 @@ function Category() {
   return (
     <>
     <Nave/>
+    <Box  height={30}  /> 
     <Box sx={{ display: 'flex' }}>  <>  <Sidenav/>
-    <div>
+    <div><br /><br />
         <h1>Categories</h1>
    </div></>
     </Box></>

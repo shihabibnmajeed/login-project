@@ -17,9 +17,12 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { useNavigate } from 'react-router-dom';
 import Nave from './Nave';
-import './Nave.css'
-
-
+import { useAppstore } from './Appstore';
+import SendIcon from '@mui/icons-material/Send';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
+import Collapse from '@mui/material/Collapse';
 
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
@@ -73,7 +76,13 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 export default function Sidenav() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  
+  const open = useAppstore((state) => state.dopen);
+  const [listopen, setListOpen] = React.useState(true);
+
+ const handleClick = () => {
+   setListOpen(!listopen);
+ };
  const navigate=useNavigate();
 
   return (
@@ -84,9 +93,7 @@ export default function Sidenav() {
 
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton onClick={()=>setOpen(!open)}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
+         
         </DrawerHeader>
         <Divider />
         <List>
@@ -107,10 +114,44 @@ export default function Sidenav() {
                 >
                   <InboxIcon /> 
                 </ListItemIcon>
-                <ListItemText primary="Product" sx={{ opacity: open ? 1 : 0 }}onClick={()=>{navigate("/Product")}} />
+                <ListItemText primary="Dashbord" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
         </List>
+        
+         <List>
+        
+        <ListItemButton onClick={handleClick}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Product" />
+        {listopen ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={listopen} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Product1" onClick={()=>{navigate("/Product")}}/>
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Product2" />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Product" />
+          </ListItemButton>
+        </List>
+      </Collapse>
+            
+        </List>       
         <Divider />
         <List>
         <ListItem  disablePadding sx={{ display: 'block' }} >

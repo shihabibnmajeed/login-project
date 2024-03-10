@@ -1,14 +1,40 @@
 import React, { useState } from 'react'
-import { Button, Col, Container, Form, Modal, Row } from 'react-bootstrap'
+import { Button, Col, Container, Form, FormControl, Modal, Row } from 'react-bootstrap'
 import  './Login.css'
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Link, useNavigate } from 'react-router-dom'
-import { colors } from '@mui/material';
+import { IconButton, InputAdornment, Select, TextField, colors } from '@mui/material';
 function Login() {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [values, setValues] = React.useState({
+    password: "",
+    showPassword: false,
+});
+
+const handleClickShowPassword = () => {
+    setValues({
+        ...values,
+        showPassword: !values.showPassword,
+    });
+};
+
+const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+};
+
+const handlePasswordChange = (prop) => (event) => {
+    setValues({
+        ...values,
+        [prop]: event.target.value,
+    });
+};
+
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -39,28 +65,52 @@ function Login() {
       <img className='login-image' src="https://www.shutterstock.com/image-vector/man-key-near-computer-account-260nw-1499141258.jpg" alt="" />
       </div>
 <div className="login-form">
-  <h1>LOGIN</h1><br />
-      <Form.Label className='login-userlabel' htmlFor="inputPassword5">USERNAME</Form.Label>
-    <Form.Control className='login-input'
-      type="text"
+  <h1 className='login-head'>LOGIN</h1><br />
+  <Form.Group className='group'>
+  <Form.Label className='login-userlabel' htmlFor="inputPassword5">USERNAME</Form.Label>
+      <TextField sx={{ m: 0,ml:1, width: 290 }} 
+    size="small"
+        type={values.showPassword ? "text" : "password"}
+        onChange={(e) => setUsername(e.target.value)}
+        
+    />
+  </Form.Group>
+     <Form.Group className='group'> <Form.Label className='login-userlabel' htmlFor="inputPassword5">PASSWORD</Form.Label>
+     
+     <TextField sx={{ m: 0,ml:1, width: 290 }} 
+     size="small"
+         type={values.showPassword ? "text" : "password"}
+         onChange={(e) => setPassword(e.target.value)}
+         
+         InputProps={{
+             endAdornment: (
+                 <InputAdornment position="end">
+                     <IconButton
+                         onClick={handleClickShowPassword}
+                         onMouseDown={handleMouseDownPassword}
+                     >
+                         {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                     </IconButton>
+                 </InputAdornment>
+             )
+         }}
+     /> </Form.Group>
     
-      aria-describedby="passwordHelpBlock"
-      onChange={(e)=>setUsername(e.target.value)}
-    />
-     <Form.Label className='login-userlabel' htmlFor="inputPassword5">PASSWORD</Form.Label>
-    <Form.Control className='login-input'
-      type="password"
-      id="inputPassword5"
-      aria-describedby="passwordHelpBlock"  onChange={(e)=>setPassword(e.target.value)}
-    />
-     <Form.Label className='login-branchlabel' htmlFor="inputPassword5">BRANCH</Form.Label>
-     <Form.Select className='login-option' aria-label="Default select example">
-   <option hidden selected>Select one...</option>
-   <option value="1">branch 1</option>
-   <option value="2">branch 2</option>
-   <option value="3">branch 3</option>
- </Form.Select>
+<Form.Group className='group'>
+<Form.Label className='login-branchlabel' htmlFor="inputPassword5">BRANCH</Form.Label>
+     <Select   sx={{ m: 0,ml:1, width: 290 }}
+        fullWidth
+        size="small"
+        >
+          
+                        <option className='option-branch' value="1">branch1</option>
+                        <option className='option-branch' value="2">branch2</option>
+                        <option className='option-branch' value="3">branch3</option>
+
+        </Select>
  
+</Form.Group>
+   
         <Button variant="secondary" className='login-button'onClick={handleLogin}>Login</Button>
     
 <hr />
@@ -82,7 +132,7 @@ function Login() {
  
   <Modal show={show} onHide={handleClose}>
         <Modal.Header className='modals' closeButton>
-          <Modal.Title>SIGN UP</Modal.Title>
+          <h1 className='hending'>SIGN UP</h1>
         </Modal.Header>
         <Modal.Body className='modals'>
           <Form>
@@ -90,7 +140,6 @@ function Login() {
               <Form.Label className='label' >USER NAME</Form.Label>
               <Form.Control className='control'
                 type="text"
-                placeholder="USERNAME"
                 autoFocus
               />
             </Form.Group>
@@ -98,12 +147,26 @@ function Login() {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-               <Form.Label className='label'>PASSWORD</Form.Label>
-              <Form.Control  className='control'
-                type="text"
-                placeholder="PASSWORD"
-                autoFocus
-              />
+               <Form.Label className='label'>PASSWORD</Form.Label><br/>
+               
+               <TextField  sx={{ m: 0,ml:9, width: 350,height:45} }
+    size="small"
+        type={values.showPassword ? "text" : "password"}
+        onChange={handlePasswordChange("password")}
+        value={values.password}
+        InputProps={{
+            endAdornment: (
+                <InputAdornment  position="end">
+                    <IconButton
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                    >
+                        {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                </InputAdornment>
+            )
+        }}
+    />
             </Form.Group>
             <Form.Group
               className="mb-3"
@@ -112,7 +175,6 @@ function Login() {
                <Form.Label className='label'>CONFORM PASSWORD</Form.Label>
               <Form.Control  className='control'
                 type="text"
-                placeholder="CONFORM PASSWORD"
                 autoFocus
               />
             </Form.Group>

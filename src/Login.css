@@ -5,6 +5,10 @@
     height: 350px;
     width: 350px;
 }
+.login-head
+{
+  margin-top: 20px;
+}
 .main
 {
     
@@ -24,18 +28,23 @@
     height: 40px;
     width: 300px;
 }
+.group
+{
+  padding-bottom: 10px;
+}
 .login-userlabel
 {
+  
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: blue;
-    margin-right: 225px;
+    margin-right: 205px;
 }
 .login-branchlabel
 {
     
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: blue;
-    margin-right: 245px;
+    margin-right: 225px;
 }
 .login-form
 {
@@ -88,7 +97,7 @@ margin-left: 250px;
     border-radius: 50px 50px;
     color: white;
     height: 40px;
-    width: 300px;
+    width: 270px;
     
 }
 
@@ -103,12 +112,10 @@ h1
     justify-content:flex-start;
 }
 .sty
-{
+{  
     text-decoration: none;
     list-style-type: none;
 }
-
-
  
 .fonts
 { 
@@ -126,18 +133,29 @@ h1
 .modals
 {
   
-   background: linear-gradient(to bottom right, #c2e9fb,rgb(34, 10, 59));
+   background: white;
 
+}
+.hending
+{
+   color: rgb(127, 43, 216) ;  
 }
 .control
 {
+
   margin-left:70px ;
   width: 350px;
-  height: 45px;
+  height: 40px;
 }
 .label
 {
+  margin-top: 10px;
+  color: blue;
   margin-left: 70px;
+}
+.sign-but
+{
+  background-color:  rgb(34, 7, 63);
 }
 
 /* modal */

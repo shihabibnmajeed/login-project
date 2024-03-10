@@ -6,9 +6,11 @@ function Product() {
   return (
     <>
     <Nave/>
+    <Box  height={30}  /> 
     <Box sx={{ display: 'flex' }}>  <>    <Sidenav/>
-    <div>
+    <div>  <br /><br />
         <h1>PRODUCTS</h1>
+        
    </div></>
     </Box></>
   )
