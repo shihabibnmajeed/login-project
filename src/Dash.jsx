@@ -10,45 +10,45 @@ function Dash() { {
     const data = [
         {
           name: 'Page A',
-          uv: 4000,
-          pv: 2400,
-          amt: 2400,
+          uv: 2800,
+          pv: 2000,
+          amt: 3300,
         },
         {
           name: 'Page B',
-          uv: 3000,
-          pv: 1398,
-          amt: 2210,
+          uv: 3400,
+          pv: 1898,
+          amt: 2710,
         },
         {
           name: 'Page C',
-          uv: 2000,
-          pv: 9800,
-          amt: 2290,
+          uv: 2700,
+          pv: 8000,
+          amt: 9290,
         },
         {
           name: 'Page D',
-          uv: 2780,
-          pv: 3908,
-          amt: 2000,
+          uv: 4780,
+          pv: 3708,
+          amt: 8000,
         },
         {
           name: 'Page E',
-          uv: 1890,
-          pv: 4800,
-          amt: 2181,
+          uv: 1440,
+          pv: 4700,
+          amt: 2047,
         },
         {
           name: 'Page F',
           uv: 2390,
-          pv: 3800,
-          amt: 2500,
+          pv: 7800,
+          amt: 2550,
         },
         {
           name: 'Page G',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
+          uv: 8490,
+          pv: 7300,
+          amt: 6100,
         },
       ];
 
@@ -67,31 +67,31 @@ function Dash() { {
   <div className='main-cards'>
     <div className='card'>
         <div className='card-inner'>
-            <h3>Sales</h3>
+            <h3 className='color-heading'>Sales</h3>
             <FcSalesPerformance  className='card_icon'/>
         </div>
-        <h1>1500</h1>
+        <h1>1725</h1>
     </div>
     <div className='card'>
         <div className='card-inner'>
-            <h3>Employees</h3>
+            <h3 className='color-heading'>Employees</h3>
             <BsPeopleFill className='card_icon'/>
         </div>
-        <h1>125</h1>
+        <h1>99</h1>
     </div>
     <div className='card'>
         <div className='card-inner'>
-            <h3>Profit</h3>
+            <h3 className='color-heading'>Profit</h3>
             <GiProfit  className='card_icon'/>
         </div>
-        <h1>1200000</h1>
+        <h1>18500</h1>
     </div>
     <div className='card'>
         <div className='card-inner'>
-            <h3>Pending Job Orders</h3>
+            <h3 className='color-heading'>Pending Job Orders</h3>
             <BsFillBellFill className='card_icon'/>
         </div>
-        <h1>10</h1>
+        <h1>15</h1>
     </div>
   </div>
   <div className='charts'>
@@ -141,7 +141,7 @@ function Dash() { {
   </div>
     </main>
    </Box>
-
+   
     </> 
   )
         }

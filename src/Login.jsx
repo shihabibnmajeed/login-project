@@ -10,6 +10,7 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const [confirmPassword, setConfirmPassword] = useState(''); // Add state for confirmPassword
   const [show, setShow] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [values, setValues] = React.useState({
@@ -34,8 +35,20 @@ const handlePasswordChange = (prop) => (event) => {
         [prop]: event.target.value,
     });
 };
+const handleSignUp = () => {
+  // Check if password and confirmPassword match
+  if (password === confirmPassword) {
+    // Handle sign-up logic here
+    // For now, let's just close the modal
+    handleClose();
+  } else {
+    alert("Passwords do not match");
+  }
+};
 
-
+ const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   // const { login } = useAuth();
@@ -62,7 +75,7 @@ const handlePasswordChange = (prop) => (event) => {
       <Col>
       <div className="main">
           <div className="login-imgheader">
-      <img className='login-image' src="https://www.shutterstock.com/image-vector/man-key-near-computer-account-260nw-1499141258.jpg" alt="" />
+      <img className='login-image' src="https://t4.ftcdn.net/jpg/03/86/51/03/240_F_386510351_03Qk3je4FGnVLo4vXRdOpoDWfZjtmajd.jpg" alt="" />
       </div>
 <div className="login-form">
   <h1 className='login-head'>LOGIN</h1><br />
@@ -70,7 +83,7 @@ const handlePasswordChange = (prop) => (event) => {
   <Form.Label className='login-userlabel' htmlFor="inputPassword5">USERNAME</Form.Label>
       <TextField sx={{ m: 0,ml:1, width: 290 }} 
     size="small"
-        type={values.showPassword ? "text" : "password"}
+        type="text"
         onChange={(e) => setUsername(e.target.value)}
         
     />
@@ -151,15 +164,14 @@ const handlePasswordChange = (prop) => (event) => {
                
                <TextField  sx={{ m: 0,ml:9, width: 350,height:45} }
     size="small"
-        type={values.showPassword ? "text" : "password"}
-        onChange={handlePasswordChange("password")}
-        value={values.password}
+    type={values.showPassword ? "text" : "password"}
+    onChange={(e) => setPassword(e.target.value)}
         InputProps={{
             endAdornment: (
                 <InputAdornment  position="end">
                     <IconButton
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
+                           onClick={handleClickShowPassword}
+                           onMouseDown={handleMouseDownPassword}
                     >
                         {values.showPassword ? <Visibility /> : <VisibilityOff />}
                     </IconButton>
@@ -174,7 +186,8 @@ const handlePasswordChange = (prop) => (event) => {
             >
                <Form.Label className='label'>CONFORM PASSWORD</Form.Label>
               <Form.Control  className='control'
-                type="text"
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    value={confirmPassword}
                 autoFocus
               />
             </Form.Group>
@@ -188,7 +201,7 @@ const handlePasswordChange = (prop) => (event) => {
           </Form>
         </Modal.Body>
         <Modal.Footer className='modals'>
-          <Button className='sign-but' variant="secondary " onClick={handleClose}>
+          <Button className='sign-but' variant="secondary " onClick={handleSignUp}>
             Save 
           </Button>
           <Button className='sign-but' variant="secondary" onClick={handleClose}>

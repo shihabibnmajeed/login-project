@@ -23,6 +23,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 import Collapse from '@mui/material/Collapse';
+import { green, red } from '@mui/material/colors';
 
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
@@ -88,10 +89,10 @@ export default function Sidenav() {
   return (
     <>
     <Nave/>
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex'}}>
       <CssBaseline />
 
-      <Drawer variant="permanent" open={open}>
+      <Drawer  variant="permanent" open={open}>
         <DrawerHeader>
          
         </DrawerHeader>
@@ -220,6 +221,33 @@ export default function Sidenav() {
                 <ListItemText primary="Category" sx={{ opacity: open ? 1 : 0 }} onClick={()=>{navigate("/category")}}/>
               </ListItemButton>
             </ListItem>
+        </List>
+        <List sx={{backgroundColor:'white'}}>
+        <ListItem  disablePadding sx={{ display: 'block', }} >
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  
+
+                  }}
+                >
+                  <InboxIcon /> 
+                </ListItemIcon>
+                <ListItemText  primary="Log out" sx={{ opacity: open ? 1 : 0, color:'black',fontsize: 'xx-large'}}onClick={()=>{navigate("/")}} />
+                
+              </ListItemButton>
+            </ListItem>
+            
+            
         </List>
       </Drawer>
 

@@ -35,6 +35,7 @@ const Search = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
     width: 'auto',
+    height:200,
   },
 }));
 
@@ -46,6 +47,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -56,6 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     
     transition: theme.transitions.create('width'),
     width: '100%',
+   
     [theme.breakpoints.up('md')]: {
       width: '20ch',
     },
@@ -164,7 +167,7 @@ export default function Nave() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" sx={{backgroundColor:"rgb(55, 13, 95)",color:"white"}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -176,23 +179,6 @@ export default function Nave() {
           >
             <MenuIcon />
           </IconButton>
-              <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
           
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
@@ -240,5 +226,6 @@ export default function Nave() {
       {renderMobileMenu}
       {renderMenu}
     </Box>
+    
   );
 }
