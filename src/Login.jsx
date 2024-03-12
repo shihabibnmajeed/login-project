@@ -4,6 +4,9 @@ import  './Login.css'
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Link, useNavigate } from 'react-router-dom'
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { FcGoogle } from "react-icons/fc";
 import { IconButton, InputAdornment, Select, TextField, colors } from '@mui/material';
 function Login() {
 
@@ -111,6 +114,7 @@ const handleSignUp = () => {
     
 <Form.Group className='group'>
 <Form.Label className='login-branchlabel' htmlFor="inputPassword5">BRANCH</Form.Label>
+    
      <Select   sx={{ m: 0,ml:1, width: 290 }}
         fullWidth
         size="small"
@@ -128,9 +132,9 @@ const handleSignUp = () => {
     
 <hr />
 <div >
-<a href='https://www.google.co.in/'className='login-social'> <img  src="https://logowik.com/content/uploads/images/985_google_g_icon.jpg" alt="" height={35} width={30}/></a>
-<a href='https://www.facebook.com/'className='login-social'><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTImj5adg1sNvD0iCEQcjIGr-CZGuiX1or61w&usqp=CAU" alt="" height={35} width={35 }/></a>
-<a href='https://twitter.com/?lang=en'className='login-social'><img   src="https://cdn.iconscout.com/icon/free/png-256/free-twitter-241-721979.png?f=webp" alt="" height={30} width={30}/></a>
+<a href='https://www.google.co.in/'className='login-social'><FcGoogle className='google'/> </a>
+<a href='https://www.facebook.com/'className='login-social'><FacebookOutlinedIcon className='google'></FacebookOutlinedIcon></a>
+<a href='https://twitter.com/?lang=en'className='login-social'><TwitterIcon className='google'></TwitterIcon></a>
 
 
 </div><br />

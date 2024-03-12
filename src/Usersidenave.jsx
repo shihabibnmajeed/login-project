@@ -16,7 +16,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { useNavigate } from 'react-router-dom';
-import Nave from './Nave';
 import { useAppstore } from './Appstore';
 import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -24,6 +23,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 import Collapse from '@mui/material/Collapse';
 import { green, red } from '@mui/material/colors';
+import Naveuser from './Naveuser';
 
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
@@ -75,7 +75,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-export default function Sidenav() {
+export default function UserSidenav() {
   const theme = useTheme();
   
   const open = useAppstore((state) => state.dopen);
@@ -88,7 +88,7 @@ export default function Sidenav() {
 
   return (
     <>
-    <Nave/>
+    <Naveuser/>
     <Box sx={{ display: 'flex'}}>
       <CssBaseline />
 
@@ -147,7 +147,7 @@ export default function Sidenav() {
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Product3" />
+            <ListItemText primary="Product" />
           </ListItemButton>
         </List>
       </Collapse>

@@ -5,6 +5,7 @@ import Sidenav from './Sidenav'
 import Product from './Product'
 import Category from './Category'
 import Dash from './Dash'
+import Userdash from './Userdash'
 
 
 function Router1() {
@@ -13,6 +14,7 @@ function Router1() {
 <BrowserRouter>
 <Routes>
   <Route path='/' element={<><Login/></>}/>
+  <Route path='/user' element={<><Userdash/></>}/>
   <Route path="/admindash" element={<><Dash/></>}/>
     <Route path="/product" element={<><Product/></>}/>
     <Route path="/category" element={<><Category/></>}/>

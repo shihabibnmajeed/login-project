@@ -157,7 +157,11 @@ h1
 {
   background-color:  rgb(34, 7, 63);
 }
-
+.google
+{
+  height: 35px;
+  width: 35px;
+}
 /* modal */
 @media screen and (max-width: 1000px) {
     .login-header1 {
