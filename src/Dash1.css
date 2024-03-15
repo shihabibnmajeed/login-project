@@ -21,43 +21,54 @@
   margin: 15px 0;
   }
   
-  .cardees
+   .cardes
+   {
+    background: lightblue;
+    border: 1px solid;
+   }
+  .cards
   {
+    border: 1px solid  rgb(55, 13, 95);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 8px 15px;
     border-radius: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: black;
+    background: white;
   }
-  .cardees:first-child
+  .cards:first-child
   { 
 
     font-family:Georgia, 'Times New Roman', Times, serif ;
     color: white;
     border-radius: 1rem;
-    background: linear-gradient(135deg, rgb(55, 13, 95),rgb(143, 78, 78),skyblue);
+    background: #58508d;
   }
-  .cardees:nth-child(2)
+  .cards:nth-child(2)
   {
     font-family:Georgia, 'Times New Roman', Times, serif ;
    color: white;
     border-radius: 1rem;
-    background: linear-gradient(135deg,rgb(55, 13, 95),rgb(166, 211, 166),rgb(195, 142, 233));
+    background: #bc5090;
   }
-  .cardees:nth-child(3)
+  .cards:nth-child(3)
   {
     font-family:Georgia, 'Times New Roman', Times, serif ;
     color: white;
     border-radius: 1rem;
-    background: linear-gradient(135deg,rgb(55, 13, 95),rgb(180, 100, 100),rgb(211, 167, 85));
+    background: #ff6361;
   }
-  .cardees:nth-child(4)
+  .cards:nth-child(4)
   {
   font-family:Georgia, 'Times New Roman', Times, serif ;
     color: white;
     border-radius: 1rem;
-    background: linear-gradient(135deg,rgb(55, 13, 95),rgb(76, 76, 146),rgb(70, 45, 88));
+    background: #ffa600;
   }
+ 
+  
   .color-heading
   {
     color: white;

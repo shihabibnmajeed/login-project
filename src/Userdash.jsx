@@ -1,11 +1,12 @@
 import React from 'react'
 import {BsFillArchiveFill,BsFillGrid3X3GapFill,BsPeopleFill,BsFillBellFill} from 'react-icons/bs'
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Line, LineChart } from 'recharts';
-import './Dash.css'
-import { Box } from '@mui/material';
+import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Line, LineChart, ComposedChart } from 'recharts';
+import './Dash1.css'
+import { Box} from '@mui/material';
 import { FcSalesPerformance } from 'react-icons/fc';
 import { GiProfit } from 'react-icons/gi'
 import UserSidenav from './Usersidenave';
+import { Card } from 'react-bootstrap'
 function Userdash() { {
     const data = [
         {
@@ -65,59 +66,67 @@ function Userdash() { {
   </div>
 
   <div className='main-cards'>
-    <div className='card'>
+    <div className='cards'>
         <div className='card-inner'>
-            <h3 className='color-heading'>Sales</h3>
+            <h4 className='color-headings'>Sales</h4>
             <FcSalesPerformance  className='card_icon'/>
         </div>
         <h1>1725</h1>
     </div>
-    <div className='card'>
+    <div className='cards'>
         <div className='card-inner'>
-            <h3 className='color-heading'>Employees</h3>
+            <h4 className='color-headings'>Employees</h4>
             <BsPeopleFill className='card_icon'/>
         </div>
         <h1>99</h1>
     </div>
-    <div className='card'>
+    <div className='cards'>
         <div className='card-inner'>
-            <h3 className='color-heading'>Profit</h3>
+            <h4 className='color-headings'>Profit</h4>
             <GiProfit  className='card_icon'/>
         </div>
         <h1>18500</h1>
     </div>
-    <div className='card'>
+    <div className='cards'>
         <div className='card-inner'>
-            <h3 className='color-heading'>Pending Job Orders</h3>
+            <h4 className='color-headings'>Pending Job Orders</h4>
             <BsFillBellFill className='card_icon'/>
         </div>
         <h1>15</h1>
     </div>
   </div>
   <div className='charts'>
-
-  <ResponsiveContainer width="100%" height="100%">
-        <BarChart
+  <Card className='cardes' style={{ width: '30rem' }}>
+      
+      <Card.Body>
+      <ResponsiveContainer width="100%" height="100%">
+        <ComposedChart
           width={500}
-          height={300}
+          height={400}
           data={data}
           margin={{
-            top: 5,
-            right: 30,
+            top: 20,
+            right: 20,
+            bottom: 20,
             left: 20,
-            bottom: 5,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <CartesianGrid stroke="#f5f5f5" />
+          <XAxis dataKey="name" scale="band" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
-          <Bar dataKey="uv" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
-        </BarChart>
+          <Bar dataKey="uv" barSize={20} fill="#413ea0" />
+          <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+        </ComposedChart>
       </ResponsiveContainer>
-      <ResponsiveContainer width="100%" height="100%">
+  
+      </Card.Body>
+    </Card>
+    <Card className='cardes' style={{ width: '29rem' }}>
+      
+      <Card.Body>
+    <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
           height={300}
@@ -134,10 +143,11 @@ function Userdash() { {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="uv" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
         </LineChart>
       </ResponsiveContainer>
+      </Card.Body></Card>
   </div>
     </main>
    </Box>

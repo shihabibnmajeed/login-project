@@ -167,7 +167,7 @@ export default function Naveuser() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{backgroundColor:"rgb(55, 13, 95)",color:"white"}}>
+      <AppBar position="fixed" sx={{backgroundColor:"white",color:"black"}}>
         <Toolbar>
           <IconButton
             size="large"

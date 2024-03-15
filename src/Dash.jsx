@@ -65,28 +65,28 @@ function Dash() { {
   </div>
 
   <div className='main-cards'>
-    <div className='card'>
+    <div className='cardees'>
         <div className='card-inner'>
             <h3 className='color-heading'>Sales</h3>
             <FcSalesPerformance  className='card_icon'/>
         </div>
         <h1>1725</h1>
     </div>
-    <div className='card'>
+    <div className='cardees'>
         <div className='card-inner'>
             <h3 className='color-heading'>Employees</h3>
             <BsPeopleFill className='card_icon'/>
         </div>
         <h1>99</h1>
     </div>
-    <div className='card'>
+    <div className='cardees'>
         <div className='card-inner'>
             <h3 className='color-heading'>Profit</h3>
             <GiProfit  className='card_icon'/>
         </div>
         <h1>18500</h1>
     </div>
-    <div className='card'>
+    <div className='cardees'>
         <div className='card-inner'>
             <h3 className='color-heading'>Pending Job Orders</h3>
             <BsFillBellFill className='card_icon'/>

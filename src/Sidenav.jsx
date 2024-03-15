@@ -16,7 +16,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { useNavigate } from 'react-router-dom';
-import Nave from './Nave';
+
 import { useAppstore } from './Appstore';
 import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -24,6 +24,14 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 import Collapse from '@mui/material/Collapse';
 import { green, red } from '@mui/material/colors';
+import Nave from './Nave';
+import CategoryIcon from '@mui/icons-material/Category';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import ReportOutlinedIcon from '@mui/icons-material/ReportOutlined';
+import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
+import LogoutIcon from '@mui/icons-material/Logout';
+import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/ProductionQuantityLimitsOutlined';
+
 
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
@@ -79,7 +87,7 @@ export default function Sidenav() {
   const theme = useTheme();
   
   const open = useAppstore((state) => state.dopen);
-  const [listopen, setListOpen] = React.useState(true);
+  const [listopen, setListOpen] = React.useState(false);
 
  const handleClick = () => {
    setListOpen(!listopen);
@@ -106,16 +114,12 @@ export default function Sidenav() {
                   px: 2.5,
                 }}
               >
-                <ListItemIcon
-                  sx={{
+                
+                <HomeOutlinedIcon sx={{
                     minWidth: 0,
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
-                  }}
-                >
-                  <InboxIcon /> 
-                </ListItemIcon>
-                <ListItemText primary="Dashbord" sx={{ opacity: open ? 1 : 0 }} />
+                  }}></HomeOutlinedIcon>         <ListItemText primary="Dashbord" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
         </List>
@@ -123,9 +127,11 @@ export default function Sidenav() {
          <List>
         
         <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
+        < ProductionQuantityLimitsOutlinedIcon  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}></ProductionQuantityLimitsOutlinedIcon>
         <ListItemText primary="Product" />
         {listopen ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
@@ -147,7 +153,7 @@ export default function Sidenav() {
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Product3" />
+               <ListItemText primary="Product" />
           </ListItemButton>
         </List>
       </Collapse>
@@ -163,15 +169,12 @@ export default function Sidenav() {
                   px: 2.5,
                 }}
               >
-                <ListItemIcon
-                  sx={{
+                
+                <ReportOutlinedIcon sx={{
                     minWidth: 0,
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
-                  }}
-                >
-                  <InboxIcon /> 
-                </ListItemIcon>
+                  }}></ReportOutlinedIcon>
                 <ListItemText primary="reports" sx={{ opacity: open ? 1 : 0 }}onClick={()=>{navigate("/Product")}} />
               </ListItemButton>
             </ListItem>
@@ -186,15 +189,12 @@ export default function Sidenav() {
                   px: 2.5,
                 }}
               >
-                <ListItemIcon
-                  sx={{
+               
+                <Inventory2OutlinedIcon sx={{
                     minWidth: 0,
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
-                  }}
-                >
-                  <InboxIcon /> 
-                </ListItemIcon>
+                  }}></Inventory2OutlinedIcon>
                 <ListItemText primary="inventory" sx={{ opacity: open ? 1 : 0 }}onClick={()=>{navigate("/Product")}} />
               </ListItemButton>
             </ListItem>
@@ -209,15 +209,12 @@ export default function Sidenav() {
                   px: 2.5,
                 }}
               >
-                <ListItemIcon
-                  sx={{
+               
+                <CategoryIcon sx={{
                     minWidth: 0,
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
-                  }}
-                >
-                 <InboxIcon />
-                </ListItemIcon>
+                  }}></CategoryIcon>
                 <ListItemText primary="Category" sx={{ opacity: open ? 1 : 0 }} onClick={()=>{navigate("/category")}}/>
               </ListItemButton>
             </ListItem>
@@ -231,17 +228,13 @@ export default function Sidenav() {
                   px: 2.5,
                 }}
               >
-                <ListItemIcon
-                  sx={{
+                <LogoutIcon sx={{
                     minWidth: 0,
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
                   
 
-                  }}
-                >
-                  <InboxIcon /> 
-                </ListItemIcon>
+                  }}></LogoutIcon>
                 <ListItemText  primary="Log out" sx={{ opacity: open ? 1 : 0, color:'black',fontsize: 'xx-large'}}onClick={()=>{navigate("/")}} />
                 
               </ListItemButton>
