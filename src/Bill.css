@@ -1,0 +1,26 @@
+.Billmain
+{
+    
+    margin-left: 400px;
+    height:700px;
+    width: 700px;
+}
+.Bills
+{
+    display: flex;
+    justify-content: space-between;
+}
+.totalamount
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.dotes{
+    border-top: 3px dotted black;
+}
+.tabletr
+{
+    background: gray;
+}

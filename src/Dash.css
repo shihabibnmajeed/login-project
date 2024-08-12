@@ -1,5 +1,5 @@
   /* Main */
-  .main-container
+  .maincontainer
   {
     margin-left: 100px;
     grid-area: main;
@@ -7,12 +7,17 @@
     padding: 20px 20px;
     color: rgba(255,255, 255, 0.95);
   }
-  .main-title
+  .maintitle
   {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   
   }
+  .maintitle .outbut
+  {
+    margin-right: 5px;
+  }
+  
   .main-cards
   {
   display: grid;
@@ -20,47 +25,146 @@
   gap:20px;
   margin: 15px 0;
   }
-  
+ 
   .cardees
   {
+    
+    color: black;
+    width: 220px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 8px 15px;
-    border-radius: 5px;
+    
   }
+  .cardicon1
+  {
+    border-radius: 5px ;
+    width: 25px;
+    height: 20px;
+    background-color:lightblue;
+    margin-top: 10px;
+  }
+  .cardicon2
+  {
+    border-radius: 5px ;
+    width: 25px;
+    height: 20px;
+    background-color:lightgoldenrodyellow;
+    margin-top: 10px;
+  }
+  .cardicon3
+  {
+    border-radius: 5px ;
+    width: 25px;
+    height: 20px;
+    background-color:lightcoral;
+    margin-top: 10px;
+  }
+  .cardicon4
+  {
+    border-radius: 5px ;
+    width: 25px;
+    height: 20px;
+    background-color: lightblue;
+    margin-top: 10px;
+  }
+  .cardicon5
+  {
+    border-radius: 5px ;
+    width: 25px;
+    height: 20px;
+    background-color: lightgoldenrodyellow;
+    margin-top: 10px;
+  }
+  .cardicon6
+  {
+    border-radius: 5px ;
+    width: 25px;
+    height: 20px;
+    background-color:lightblue;
+    margin-top: 10px;
+  }
+  .cardicon7
+  {
+    border-radius: 5px ;
+    width: 25px;
+    height: 20px;
+    background-color:lightblue;
+    margin-top: 10px;
+  }
+  .cardicon8
+  {
+    border-radius: 5px ;
+    width: 25px;
+    height: 20px;
+    background-color:lightcoral;
+    margin-top: 10px;
+  }
+
   .cardees:first-child
   { 
-
-    font-family:Georgia, 'Times New Roman', Times, serif ;
-    color: white;
-    border-radius: 1rem;
-    background: linear-gradient(135deg, rgb(55, 13, 95),rgb(143, 78, 78),skyblue);
+    
+    border-radius: 5px;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
   }
   .cardees:nth-child(2)
   {
-    font-family:Georgia, 'Times New Roman', Times, serif ;
-   color: white;
-    border-radius: 1rem;
-    background: linear-gradient(135deg,rgb(55, 13, 95),rgb(166, 211, 166),rgb(195, 142, 233));
+    
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  
   }
   .cardees:nth-child(3)
   {
-    font-family:Georgia, 'Times New Roman', Times, serif ;
-    color: white;
-    border-radius: 1rem;
-    background: linear-gradient(135deg,rgb(55, 13, 95),rgb(180, 100, 100),rgb(211, 167, 85));
+    
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
   }
   .cardees:nth-child(4)
   {
-  font-family:Georgia, 'Times New Roman', Times, serif ;
-    color: white;
-    border-radius: 1rem;
-    background: linear-gradient(135deg,rgb(55, 13, 95),rgb(76, 76, 146),rgb(70, 45, 88));
+   
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
   }
-  .color-heading
+  .cardees:nth-child(5)
   {
-    color: white;
+    
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  .cardees:nth-child(6)
+  {
+  
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  .cardees:nth-child(7)
+  {
+    
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  .cardees:nth-child(8)
+  {
+    
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  .colorheading
+  {
+    font-size: 15px;
+    color: black;
   }
   .card-inner
   {
@@ -68,6 +172,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .cardbottom
+  {
+    margin-right: 80px;
   }
   .charts
   {
@@ -84,6 +192,12 @@
     /* Medium <= 992px */
 
 @media screen and (max-width:992px) {
+.maincontainer
+{
+  
+  display: inline-block;
+  
+}
 
   .charts
 {
@@ -91,9 +205,12 @@
 }
   .main-cards
   {
+  
     display: inline-block;
   
   }
+ 
+  
 }
 
 /* Extra Small <=576 */
@@ -107,5 +224,6 @@
     display: inline-block;
   
   }
+
   
 }

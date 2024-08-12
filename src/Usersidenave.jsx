@@ -172,7 +172,7 @@ export default function UserSidenav() {
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
                   }}></ReportOutlinedIcon>
-                <ListItemText primary="reports" sx={{ opacity: open ? 1 : 0 }}onClick={()=>{navigate("/Product")}} />
+                <ListItemText primary="reports" sx={{ opacity: open ? 1 : 0 }}onClick={()=>{navigate("/report")}} />
               </ListItemButton>
             </ListItem>
         </List>

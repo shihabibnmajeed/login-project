@@ -1,0 +1,341 @@
+.mainse
+{  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   width: 100%;
+   
+}
+
+.firstgrid
+{
+
+   height: 700px;
+   background-color:lightgray;
+   
+}
+.secondgrid
+{ 
+    
+    height: 1500px;
+   
+   
+}
+.top
+{
+    
+    display: flex;
+    justify-content: flex-start;
+}
+.topsub
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -25px;
+}
+.roundbut
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.round
+{
+border-radius: 7rem;
+background-color: white;
+}
+.back
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.botbutt
+{
+    width: 100px;
+    margin-right: -260px;
+    margin-top: 30px;
+}
+.mm
+{
+    height: 20px;
+}
+.cols
+{
+    background-color: lightgray;
+}
+.col1
+{
+    background-color: red;
+}
+
+.heads
+{   
+
+    height: 50px;
+    color: white;
+    margin-left: -12px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(184, 35, 35);
+}
+.down
+{
+    margin-top: 15px;
+}
+.ic
+{
+    width: 30px;
+    height: 25px;
+}
+.down:hover
+{   
+    margin-top: 15px;
+    height: 40px;
+    width: 100px;
+    color: black;
+    background-color: white;
+}
+.arrows
+{
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+}
+.secondhead
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.roundred{
+    
+    border-radius: 10rem;
+    width: 90px;
+    height: 90px;
+}
+.roundred:hover
+{
+    background-color: yellow;
+}
+.itemstitle
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+.itemstitles
+{
+    margin-left: 110px;
+}
+.itemstitless
+{
+    margin-left: 80px;
+}
+.itemstitlesss
+{
+    margin-left: 80px;
+}
+.itemstitlessss
+{
+    margin-left: 85px;
+}
+.cardimg
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.cardcolor
+{
+    background-color: lightgray;
+}
+.bbts
+{
+ display: flex;
+}
+.but
+{
+    background-color: white;
+ margin-left: 5px;
+ margin-top: -2px;
+}
+.cal
+{
+  display: inline-block;
+
+}
+.cal1
+{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.caladdbutton
+{
+  color: rgb(231, 231, 243);
+  width: 115px;
+
+  background-color: rgb(105, 105, 233);
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgb(168, 216, 251), 0 6px 20px 0 white;
+}
+.paymentbutton
+{
+  color:white;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+
+ background-color: rgb(52, 106, 206);
+ 
+  border: none;
+ 
+
+}
+.calnumbutton
+{
+  height: 50px;
+  width: 100px;
+  background-color: rgb(240, 242, 247);
+  border-radius: 15px;
+  color: rgb(118, 118, 222);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgb(148, 148, 227), 0 6px 20px 0 rgb(167, 167, 230);
+}
+.calnumbutton:hover{
+  background-color: rgb(26, 89, 224);
+  color: white;
+}
+
+.calnumsbutton
+{
+  border-radius: 15px;
+  border: none;
+  width: 110px;
+  color:white;
+background-color: rgb(101, 101, 227);
+}
+.input__boxs{
+text-align: right;
+  color: rgb(29, 29, 133);
+  width: 355px;
+  height: 30px;
+  border: 1px solid #dbdfea;
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+  border-bottom-color: rgb(17, 102, 212);
+}
+.inputhead
+{
+  padding: 20px;
+}
+.input__boxss{
+  text-align: right;
+    color: rgb(29, 29, 133);
+    width: 125px;
+    height: 30px;
+    
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    border-bottom-color: white;
+  }
+.itemincrement
+{
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.amountpaidp
+{
+  display: flex;
+}
+.amountpaid
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+.paymenttype
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+.settlebutton
+{
+  width: 420px;
+}
+.totalAmount
+{
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.itemincrement td
+{
+    color:rgb(208, 147, 34);
+}
+.foodimage
+{
+    margin-left: 4px;
+    margin-top: 2px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.itembutton
+{
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 10px;
+}
+.orderform1
+{
+
+   
+    width: 1054px;
+    height:850px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+.orderform2
+{
+    background-color:white;
+    width:465px;
+    height: 855px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+}
+.col1h2
+{
+    color: black;
+}
+.totalAmount {
+  padding: 15px;
+  border-top: 1px solid #dee2e6;
+}
+.col2h2
+{
+    color: black;
+    margin-top: 10px;
+    margin-right: 230px;
+}
+.settlebutton
+{
+  margin-bottom: 15px;
+}
+.paybottom
+{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  
+}
+.payvalinput
+{
+  margin-left: 20px;
+  width: 110px;
+}
+.paymentbutton
+{
+  width: 100px;
+  height: 75px;
+}

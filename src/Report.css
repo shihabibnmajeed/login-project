@@ -1,0 +1,171 @@
+.salesmain
+{
+    margin-top: 20px;
+    height: 100px;
+    width: 100%;
+    border: 1px ;
+    border-radius:  10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+
+}
+.fields
+{
+    display: flex;
+    justify-content: space-around;
+    padding:10px 10px 10px 10px ;
+}
+.salesheader
+{
+    height: 670px;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color:white;
+}
+.salesselectlabel
+{
+    margin-right: 160px;
+}
+.fromlabel
+{
+    margin-right: 210px;
+}
+.filterb
+{
+    margin-right: 100px;
+    background-color: blue;
+    width: 100px;
+    height: 40px;
+    margin-top: 25px;
+    color: white;
+    border-radius:  5px 5px;
+    box-sizing: border-box;
+    
+}
+.tolabel
+{
+    margin-right: 230px;
+}
+.salesselect
+{
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 250px; 
+    height: 30px;
+    border: 1px ;
+
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.salesheader2
+{
+    display: flex;
+    justify-content: space-between;
+}
+.reportsales
+{   margin-right: 15px;
+    width: 370px;
+    height: 460px;
+    border: 1px ;
+    border-radius:  10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.reportpurchases
+{   
+    margin-right: 15px;
+    width: 370px;
+    height: 460px;
+    border: 1px ;
+    border-radius:  10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.reportsalesreturn
+{
+  margin-right: 25px;
+    width: 340px;
+    height: 230px;
+    border: 1px ;
+    border-radius:  10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.reportpurchasereturn
+{
+  margin-right: 25px;
+    width: 340px;
+    height: 200px;
+    border: 1px ;
+    border-radius:  10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.headingsale
+{
+    margin-top: 20px;
+    margin-right: 250px;
+}
+.headingpurchase{
+    margin-top: 20px;
+    margin-right: 190px;
+}
+.headingsalereturn
+{
+    
+    padding-top: 18px;
+    margin-right: 130px;
+}
+.headingpurchasereturn
+{
+    padding-top: 18px;
+    margin-right: 80px;
+
+}
+@media screen and (max-width:992px) {
+
+ 
+    
+    .salesheader2{
+      display: inline;
+    }
+    .salesheader{
+      display: inline;
+    }
+    .salesmain {
+        height: 300px;
+      display: inline;
+    }
+    .fields 
+    {
+        display: inline;
+        height: 300px;
+    }
+  }
+  
+  /* Extra Small <=576 */
+  @media screen and (max-width:616px) {
+    .salesheader {
+      display: none;
+  
+    }
+    .salesmain
+  {
+  
+    display:inline-block;
+  }
+    .salesheader2
+    {
+      display: inline-block;
+    
+    }
+    .fields
+    {
+        display: inline-block;
+        height: 500px;
+    }
+    
+  }

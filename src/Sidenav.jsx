@@ -175,7 +175,7 @@ export default function Sidenav() {
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
                   }}></ReportOutlinedIcon>
-                <ListItemText primary="reports" sx={{ opacity: open ? 1 : 0 }}onClick={()=>{navigate("/Product")}} />
+                <ListItemText primary="reports" sx={{ opacity: open ? 1 : 0 }}  onClick={()=>{navigate("/report")}}/>
               </ListItemButton>
             </ListItem>
         </List>
@@ -195,7 +195,7 @@ export default function Sidenav() {
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
                   }}></Inventory2OutlinedIcon>
-                <ListItemText primary="inventory" sx={{ opacity: open ? 1 : 0 }}onClick={()=>{navigate("/Product")}} />
+                <ListItemText primary="inventory" sx={{ opacity: open ? 1 : 0 }}onClick={()=>{navigate("/Day")}} />
               </ListItemButton>
             </ListItem>
         </List>

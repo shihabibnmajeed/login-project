@@ -12,7 +12,7 @@
 .main
 {
     
-    width: 800px;
+    width: 750px;
     height: 800px;
     display: flex;
 }
@@ -65,7 +65,7 @@
 }
 .login-header1
 {
-margin-left: 250px;
+   margin-left: 250px;
     width: 550px;
     height: 500px;
 }
@@ -167,8 +167,8 @@ h1
 @media screen and (max-width: 1000px) {
     .login-header1 {
         
-        display: inline-block;
-        margin-left: 300px;
+        display: inline;
+        
         background-position: center;
     }
     
@@ -215,8 +215,9 @@ h1
 @media screen and (max-width: 417px) {
     .login-header1
     {
+      position: fixed;
   display: inline;
-  margin-right:200px ;
+  margin-right:300px ;
   background-position: center;
     }
     

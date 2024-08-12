@@ -6,12 +6,22 @@ import Sidenav from './Sidenav';
 import { Box } from '@mui/material';
 import { FcSalesPerformance } from 'react-icons/fc';
 import { GiProfit } from 'react-icons/gi'
+import CurrencyRupeeRoundedIcon from '@mui/icons-material/CurrencyRupeeRounded';
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { Button } from 'react-bootstrap';
+import { PiArrowBendDownLeftBold } from "react-icons/pi";
+import { SlPeople } from "react-icons/sl";
+import { RiShoppingCartFill } from "react-icons/ri";
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa6";
+import { IoPeopleSharp } from "react-icons/io5";
 function Dash() { {
     const data = [
         {
           name: 'Page A',
-          uv: 2800,
-          pv: 2000,
+          uv: 1000,
+          pv: 1000,
           amt: 3300,
         },
         {
@@ -46,6 +56,7 @@ function Dash() { {
         },
         {
           name: 'Page G',
+          
           uv: 8490,
           pv: 7300,
           amt: 6100,
@@ -59,39 +70,69 @@ function Dash() { {
    <><Sidenav/>
    <Box height={70}/> 
     <Box sx={{ display: 'flex' }}>    <Sidenav/>
-    <main className='main-container home'>
-  <div className='main-title'>
-    <h3>DASHBOARD</h3>
+    <main className='maincontainer'>
+  <div className='maintitle'>
+   <Button  variant="outline-primary" className='outbut' >Today</Button>
+<Button variant="outline-primary" className='outbut'>This Month</Button>
+<Button variant="outline-primary"className='outbut' >This Year</Button>
+    
   </div>
 
   <div className='main-cards'>
     <div className='cardees'>
         <div className='card-inner'>
-            <h3 className='color-heading'>Sales</h3>
-            <FcSalesPerformance  className='card_icon'/>
+            <h6 className='colorheading'>Sales</h6>
+            <RiShoppingCartFill  className='cardicon1'/>
         </div>
-        <h1>1725</h1>
+        <h5 className='cardbottom'>$152,025.00</h5>
     </div>
     <div className='cardees'>
         <div className='card-inner'>
-            <h3 className='color-heading'>Employees</h3>
-            <BsPeopleFill className='card_icon'/>
+            <h6 className='colorheading'>Sales Return</h6>
+            < FaLongArrowAltLeft   className='cardicon2'/>
         </div>
-        <h1>99</h1>
+        <h5 className='cardbottom'>$103,522.50</h5>
     </div>
     <div className='cardees'>
         <div className='card-inner'>
-            <h3 className='color-heading'>Profit</h3>
-            <GiProfit  className='card_icon'/>
+            <h6 className='colorheading'>Purchases</h6>
+            <RiShoppingCartFill  className='cardicon3'/>
         </div>
-        <h1>18500</h1>
+        <h5 className='cardbottom'>$12,14716.80</h5>
     </div>
     <div className='cardees'>
         <div className='card-inner'>
-            <h3 className='color-heading'>Pending Job Orders</h3>
-            <BsFillBellFill className='card_icon'/>
+            <h6 className='colorheading'>Purchase Return</h6>
+            <FaLongArrowAltRight  className='cardicon4'/>
         </div>
-        <h1>15</h1>
+        <h5 className='cardbottom'>$50,1457.00</h5>
+    </div>
+    <div className='cardees'>
+        <div className='card-inner'>
+            <h6 className='colorheading'>Expenses</h6>
+            <CurrencyRupeeRoundedIcon className='cardicon5'></CurrencyRupeeRoundedIcon>
+        </div>
+        <h5 className='cardbottom'>$10,41154.00</h5>
+    </div>
+    <div className='cardees'>
+        <div className='card-inner'>
+            <h6 className='colorheading'>Users</h6>
+            <FaUsers className='cardicon6'/>
+        </div>
+        <h5 className='cardbottom'>4<FaArrowTrendUp/>All Time</h5>
+    </div>
+    <div className='cardees'>
+        <div className='card-inner'>
+            <h6 className='colorheading'>Customers</h6>
+          <IoPeopleSharp  className='cardicon7'/>
+        </div>
+        <h5 className='cardbottom'>9<FaArrowTrendUp/>All Time</h5>
+    </div>    <div className='cardees'>
+        <div className='card-inner'>
+            <h6 className='colorheading'>Suppliers</h6>
+            <IoPeopleSharp   className='cardicon8'/>
+        </div>
+        <h5 className='cardbottom'>3<FaArrowTrendUp/>All Time</h5>
     </div>
   </div>
   <div className='charts'>
